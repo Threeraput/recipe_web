@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-cream: #fdfbf7;
+  --color-brand-beige: #f8f2e8;
+  --color-brand-warmtan: #ede2d0;
+  --color-brand-red: #c5221f;
+  --color-brand-darkred: #9b1917;
+  --color-brand-gold: #e5a93b;
+  --color-brand-charcoal: #222222;
+  --color-brand-muted: #716b64;
+  --font-sans: "Montserrat", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-script: "Caveat", cursive;
+}
+
+body {
+  margin: 0;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.card-shadow {
+  box-shadow: 0 10px 25px -5px rgba(45, 25, 15, 0.12), 0 8px 10px -6px rgba(45, 25, 15, 0.08);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-shadow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 30px -8px rgba(180, 40, 20, 0.2), 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.line-art-bg {
+  stroke: #e8dcc9;
+  stroke-width: 1.6;
+  fill: none;
+  pointer-events: none;
+}
