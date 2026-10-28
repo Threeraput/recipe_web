@@ -23,11 +23,12 @@ export default function RecipeCard({ recipe, onSelect }: Props) {
       }}
       className="card-shadow group flex w-[78vw] max-w-[300px] flex-none cursor-pointer snap-start flex-col justify-between overflow-hidden rounded-xl border border-brand-warmtan/50 bg-white focus-visible:outline-2 focus-visible:outline-brand-red sm:w-[285px] lg:w-[300px]"
     >
-      <div className="relative h-44 overflow-hidden bg-zinc-900 sm:h-48">
+      <div className="relative h-52 overflow-hidden bg-zinc-900 sm:h-56">
         <img
           src={recipe.image}
           alt={recipe.title}
           loading="lazy"
+          style={{ objectPosition: recipe.imagePosition }}
           className="h-full w-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/20" />

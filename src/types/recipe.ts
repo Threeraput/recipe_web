@@ -13,6 +13,7 @@ export interface Recipe {
   productTag: { label: string; name: string; sub: string; theme: ProductTheme }
   badge?: RecipeBadgeType
   image: string
+  imagePosition?: string
   prepTime: string
   cookTime: string
   totalMinutes: number

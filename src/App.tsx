@@ -52,15 +52,8 @@ export default function App() {
 
           <RecipeCarousel recipes={visible} onSelect={setSelected} scroller={scroller} />
 
-          <div className="mt-3 flex items-center justify-between px-2 text-xs text-brand-muted">
-            <span className="inline-flex items-center gap-1.5 text-[11px]">
-              <svg className="h-4 w-4 animate-pulse text-brand-red" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path d="M13 7l5 5m0 0l-5 5m5-5H6" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-              <span className="sm:hidden">Swipe to discover recipes</span>
-              <span className="hidden sm:inline">Scroll or swipe horizontally to discover all curated recipes</span>
-            </span>
-            <span className="whitespace-nowrap pl-2 font-semibold text-brand-charcoal/70">
+          <div className="mt-3 flex items-center justify-end px-2 text-xs text-brand-muted">
+            <span className="whitespace-nowrap font-semibold text-brand-charcoal/70">
               Showing {visible.length} Featured Recipes
             </span>
           </div>

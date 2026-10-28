@@ -28,7 +28,7 @@ export default function RecipeModal({ recipe, onClose }: Props) {
     >
       <div className="max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white shadow-2xl">
         <div className="relative h-40 bg-zinc-900 sm:h-52">
-          <img src={recipe.image} alt={recipe.title} className="h-full w-full object-cover" />
+          <img src={recipe.image} alt={recipe.title} style={{ objectPosition: recipe.imagePosition }} className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
           <button
             aria-label="Close modal"

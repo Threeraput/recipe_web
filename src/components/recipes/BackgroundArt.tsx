@@ -1,7 +1,7 @@
 export default function BackgroundArt() {
   return (
     <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-      <svg className="line-art-bg absolute -left-6 top-8 h-72 w-44 opacity-60" viewBox="0 0 160 260">
+      <svg className="line-art-bg absolute -left-6 top-8 h-72 w-44 opacity-80" viewBox="0 0 160 260">
         <path d="M 60,18 L 88,32 C 92,34 94,39 91,44 L 75,76 C 73,80 68,81 64,79 L 36,65 C 32,63 30,58 33,54 L 49,22 C 51,18 56,16 60,18 Z" />
         <line x1="49" x2="57" y1="36" y2="52" />
         <line x1="59" x2="67" y1="41" y2="57" />
@@ -13,7 +13,7 @@ export default function BackgroundArt() {
         <path d="M 138,198 C 150,198 155,208 145,214" />
         <path d="M 12,198 C 0,198 -5,208 5,214" />
       </svg>
-      <svg className="line-art-bg absolute -top-12 right-4 h-80 w-80 opacity-40" viewBox="0 0 200 200">
+      <svg className="line-art-bg absolute -top-12 right-4 h-80 w-80 opacity-70" viewBox="0 0 200 200">
         <circle cx="150" cy="50" r="30" strokeDasharray="4 4" />
         <circle cx="150" cy="50" r="50" />
         <circle cx="150" cy="50" r="70" strokeDasharray="6 6" />
