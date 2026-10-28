@@ -1,32 +1,49 @@
-# React + TypeScript + Vite
+# Recommended Recipes Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Responsive recipe carousel built with React, TypeScript, Vite and Tailwind CSS v4.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Horizontal snap-scroll carousel with Previous/Next buttons, ArrowLeft/ArrowRight keys, mouse drag and touch swipe
+- Category filter (All Dishes, Noodles, Desserts, Salads)
+- Recipe card with product tag, badge, prep/cook time and a minute timer badge
+- Full recipe modal (close with Esc, backdrop click or the close button)
+- Responsive layout for mobile, tablet and desktop
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev      # start dev server
+npm run build    # type-check and build to dist/
+npm run preview  # preview the production build
+npm run lint     # run Oxlint
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Project structure
+
+```text
+src/
+├── components/
+│   ├── common/
+│   │   └── ArrowButton.tsx
+│   └── recipes/
+│       ├── BackgroundArt.tsx      # decorative line-art background
+│       ├── ProductTag.tsx         # product pack label on the card image
+│       ├── RecipeBadge.tsx        # BESTSELLER / SPICY / ...
+│       ├── RecipeCard.tsx
+│       ├── RecipeCarousel.tsx
+│       ├── RecipeFilterBar.tsx
+│       ├── RecipeModal.tsx
+│       └── RecipeTimerBadge.tsx
+├── data/recipesData.ts            # recipe data and category list
+├── hooks/useHorizontalScroll.ts   # scroll buttons, keyboard and drag
+├── types/recipe.ts                # Recipe type
+├── App.tsx
+├── index.css                      # Tailwind import and brand theme
+└── main.tsx
+```
+
+## Adding a recipe
+
+Add an object to the `recipes` array in `src/data/recipesData.ts`. Fields follow the `Recipe` type in `src/types/recipe.ts`. Use the optional `imagePosition` (CSS `object-position`) to control how the image is cropped.
